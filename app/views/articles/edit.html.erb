@@ -1,0 +1,9 @@
+<h1>Edit Article</h1>
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+<%= link_to "Delete", article_path(@article),
+  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<%= link_to "Back to articles", articles_path, class: "btn btn-secondary" %>

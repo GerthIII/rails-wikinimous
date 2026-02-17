@@ -1,0 +1,12 @@
+<div>
+  <h1><strong>Articles</strong></h1>
+  <ol>
+    <% @articles.each do |article| %>
+      <li>
+        <%= article.title %>
+        <%= link_to "Edit", edit_article_path(article), class: "text-muted ms-2" %>
+      </li>
+    <% end %>
+  </ol>
+</div>
+<%= link_to "Add Article", new_article_path, class: "btn btn-primary" %>
