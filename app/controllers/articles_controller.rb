@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @articles = Article.new
+    @article = Article.new
   end
 
   def create
@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     @articles = Article.find(params[:id])
     @articles.update(article_params)
     
-    redirect_to article_path(@article)
+    redirect_to articles_path(@article)
 
   end
 
